@@ -1,8 +1,9 @@
 'use strict'
 
 // Modules to control application life and the native browser window.
-import { app, BrowserWindow } from 'electron'
-
+const electron = require('electron')
+const app = electron.app
+const BrowserWindow = electron.BrowserWindow
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -15,7 +16,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadURL('file://' + __dirname + '/../browser/index.html')
+  mainWindow.loadURL('file://' + __dirname + '/browser/index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

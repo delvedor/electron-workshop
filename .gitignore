@@ -3,5 +3,5 @@ npm-debug.log
 
 .DS_Store
 
-lib/app
-lib/browser/javascript
+electron/
+slides/
