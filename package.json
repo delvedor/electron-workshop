@@ -2,11 +2,11 @@
   "name": "electron-workshop",
   "version": "1.0.0",
   "description": "Electronjs Workshop - WebIsArt Workshop",
+  "private": true,
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/delvedor/electron-workshop.git"
@@ -20,5 +20,9 @@
   "homepage": "https://github.com/delvedor/electron-workshop#readme",
   "devDependencies": {
     "electron-prebuilt": "^0.37.7"
+  },
+  "dependencies": {
+    "is-electron": "^1.2.0",
+    "materialize-css": "^0.97.6"
   }
 }
