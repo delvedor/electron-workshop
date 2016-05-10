@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../node_modules/materialize-css/dist/css/materialize.min.css" media="all" />
+    <title>Hello World!</title>
+</head>
+
+<body>
+    <div class="row">
+      <div class="col s12 center-align">
+        <h4>Electron</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 center-align input-field">
+        <input type="text" name="text" id="text">
+        <label for="text" id="textlabel">Text</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6 center-align">
+        <button class="waves-effect waves-light btn single-button cyan" name="closerenderer" type="button">Close App Renderer</button>
+      </div>
+      <div class="col s6 center-align">
+        <button class="waves-effect waves-light btn single-button cyan" name="closemain" type="button">Close App Main</button>
+      </div>
+    </div>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/hammerjs/hammer.min.js"></script>
+    <script src="../../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="../isomorphic/index.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
