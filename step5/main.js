@@ -3,7 +3,7 @@
 // Modules to control application life and the native browser window.
 const { app, BrowserWindow } = require('electron')
 const { join } = require('path')
-const is = require('is-electron')
+const is = require('electron-is')
 const globals = require('./main/globals')
 const addMenu = require('./main/menu')
 // starts internal api
@@ -55,7 +55,7 @@ app.on('ready', function createWindow () {
 app.on('window-all-closed', function allWindowClosed () {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
-  if (!is.mac()) app.quit()
+  if (!is.osx()) app.quit()
 })
 
 app.on('activate', function activateWindow () {

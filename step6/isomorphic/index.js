@@ -1,7 +1,7 @@
 'use strict'
 
 const electron = require('electron')
-const is = require('is-electron')
+const is = require('electron-is')
 
 function closeApp () {
   console.log(is.main() ? 'quit from main' : 'quit from renderer')

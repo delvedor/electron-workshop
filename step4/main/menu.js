@@ -1,7 +1,7 @@
 'use strict'
 
 const { Menu } = require('electron')
-const is = require('is-electron')
+const is = require('electron-is')
 
 const template = [{
   label: 'Edit',
@@ -43,7 +43,7 @@ const template = [{
   }, {
     label: 'Toggle Full Screen',
     accelerator: (function () {
-      return is.mac() ? 'Ctrl+Command+F' : 'F11'
+      return is.osx() ? 'Ctrl+Command+F' : 'F11'
     })(),
     click: function (item, focusedWindow) {
       if (focusedWindow) focusedWindow.setFullScreen(!focusedWindow.isFullScreen())
@@ -51,7 +51,7 @@ const template = [{
   }, {
     label: 'Toggle Developer Tools',
     accelerator: (function () {
-      return is.mac() ? 'Alt+Command+I' : 'Ctrl+Shift+I'
+      return is.osx() ? 'Alt+Command+I' : 'Ctrl+Shift+I'
     })(),
     click: function (item, focusedWindow) {
       if (focusedWindow) focusedWindow.webContents.toggleDevTools()

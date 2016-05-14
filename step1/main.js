@@ -3,7 +3,7 @@
 // Modules to control application life and the native browser window.
 const { app, BrowserWindow } = require('electron')
 const { join } = require('path')
-const is = require('is-electron')
+const is = require('electron-is')
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -38,7 +38,7 @@ app.on('ready', createWindow)
 app.on('window-all-closed', function allWindowClosed () {
   // On OS X it is common for applications and their menu bar
   // to stay active until the user quits explicitly with Cmd + Q
-  if (!is.mac()) {
+  if (!is.osx()) {
     app.quit()
   }
 })
